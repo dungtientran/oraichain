@@ -1,20 +1,20 @@
-import './App.scss';
-import { Footer, Header } from './components';
-import Home from './page/Home/Home';
+import "./App.scss";
+import { Footer, Header } from "./components";
+import { Home } from "./page";
 
-function App() {
+const App = () => {
   return (
     <div>
-    {/* Header */}
-    <Header />
+      {/* Header */}
+      <Header />
 
-{/* Home */}
-<Home />
+      {/* Home */}
+      <Home />
 
-    {/* Footer */}
-    <Footer />
+      {/* Footer */}
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,76 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+
+.hero-banner {
+    height: 100vh;
+    // overflow: hidden;
+    position: relative;
+        .hero-star-1, 
+        .hero-star-2,
+        .hero-star-3 {
+            position: absolute;
+            left: -12%;
+            top: 0;
+            width: 110%;
+            height: 100%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            -webkit-mask-size: 100% 100%;
+           
+        }
+        .hero-star-1 {
+            background-image: url('../../assets/images/hero_start_1.png');
+          
+            -webkit-mask-image: url('../../assets/images/stars_mask_1.png');
+            -webkit-transform: translateZ(-240px);
+            transform: translateZ(240px)
+        }
+        .hero-star-2 {
+            background-image: url('../../assets/images/hero_start_2.png');
+         
+            -webkit-mask-image: url('../../assets/images/stars_mask_2.png');
+            -webkit-transform: translateZ(160px);
+            transform: translateZ(160px)
+        }
+        .hero-star-3 {
+            background-image: url('../../assets/images/hero_start_3.png');
+            position: absolute;
+          
+            -webkit-mask-image: url('../../assets/images/stars_mask_3.png');
+            -webkit-mask-size: 100% 100%;
+            -webkit-transform: translateZ(160px);
+            transform: translateZ(160px)
+        }
+
+    &-inner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        opacity: 0.64;
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+    }
+
+    &-content {
+        @include flex(center, center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        z-index: 10;
+
+        p {
+            color: #ffffff;
+
+        }
+
+        .inner {
+            line-height: 6em;
+            color: white;
+            -webkit-transform: translateZ(160px);
+
+        }
+    }
+}

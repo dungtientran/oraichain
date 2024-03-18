@@ -3,6 +3,28 @@
 
 .container {
   padding: 0 16px;
-  margin: 0 277px;
+  margin: 0 auto;
+  max-width: 1352px;
 }
 
+.text-small {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.text-small-thin {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-regular {
+
+}
+
+.color-primary {
+  color: $primary
+}
+
+.color-secondary {
+  color: $secondary;
+}

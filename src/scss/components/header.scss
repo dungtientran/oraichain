@@ -1,0 +1,38 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20
+}
+
+
+.header {
+    @include flex(center, space-between);
+    height: 80px;
+
+    &-nav {
+        @include flex(center, flex-start);
+        &-item {
+            @include flex(center, center);
+            padding: 4px 12px;
+
+            span {
+                transition: all 0.1s ease-in;
+                &:hover{
+                    color: $primary
+                }
+            }
+
+            &_arrow {
+                @include flex(flex-end, center);
+                margin-left: 7px;
+                transform: rotate(90deg);
+
+            }
+        }
+    }
+}
