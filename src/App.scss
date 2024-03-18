@@ -1,0 +1,22 @@
+@use "./scss/" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html,
+body {
+  font-size: 100%;
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+#root,
+.App {
+  height: 100%;
+}
