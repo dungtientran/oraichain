@@ -1,5 +1,75 @@
 @use "./scss/" as *;
 
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "EuclidCircular";
+  src: url("https://storage.googleapis.com/graph-website/fonts/EuclidCircular/EuclidCircularA-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +85,9 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   color: white;
-  background-color: #0E0D1F;
+  // background-color: #0E0D1F;
+  background-color: rgb(12, 10, 29);
+  font-family: EuclidCircular;
 
 }
 
@@ -24,8 +96,49 @@ body {
   height: 300vh;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0A1D;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333141;
+  border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
+  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+}
+
 h1 {
-  font-size: 97px;
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
+  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
+  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
 }
 
 ul,
@@ -41,4 +154,15 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: $white;
+  transition: transform 0.2s ease;
+  border-radius: 4px;
+  font-family: EuclidCircular;
 }

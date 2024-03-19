@@ -35,29 +35,42 @@ const navs = [
 ];
 
 export const Nav = () => {
+
+
+  const handleClick = () => {
+
+  }
+
   return (
     <nav>
       <ul className="header-nav">
         {/* Logo */}
         <li>
-          <span className="header-nav-item">
-            <LogoSvg style={{ marginRight: "7px" }} />
+          <a href="#" className="header-nav-item nav-logo">
+            <LogoSvg style={{ marginRight: "7px", marginBottom: '2px' }} />
             <span className="text-small color-primary">The Graph</span>
-          </span>
+          </a>
         </li>
 
         {/* Nav list */}
         {navs.map((nav) => (
-          <li key={nav.id}>
-            <a href="#" className="header-nav-item">
-              <span className="text-small color-secondary">{nav.label}</span>
+          <li key={nav.id} className="header-nav-item" onClick={handleClick}>
 
-              {!!nav.childrend && (
-                <span className="header-nav-item_arrow">
-                  <ArrowSvg style={{ width: "12px", height: "12px" }} />
+            {!!nav.childrend ? (
+              <span className="header-nav-item_button">
+                <span className="text-small color-secondary">
+                  {nav.label}
                 </span>
-              )}
-            </a>
+                <span className="header-nav-item_arrow">
+                  <ArrowSvg style={{ width: "12px", height: "12px", }} />
+                </span>
+              </span>
+
+            ) : (
+              <span className="text-small color-secondary header-nav-item_button">
+                {nav.label}
+              </span>
+            )}
           </li>
         ))}
       </ul>

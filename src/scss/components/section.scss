@@ -1,0 +1,12 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.section-container {
+    width: 100%;
+    padding: 192px 0;
+}
+
+.section-container-notp {
+    width: 100%;
+    padding-bottom: 192px;
+}

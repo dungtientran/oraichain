@@ -7,9 +7,27 @@
   max-width: 1352px;
 }
 
+.main-2-container {
+  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1352px;
+}
+
+.main-container {
+  padding: 0 32px;
+  margin: 0 auto;
+  max-width: 1288px;
+}
+
+.text-small-12 {
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
 .text-small {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .text-small-thin {
@@ -17,14 +35,77 @@
   font-weight: 400;
 }
 
-.text-regular {
+.text-md {
+  font-size: 18px;
+  font-weight: 400;
+}
 
+.text-regular {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
+  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .color-primary {
   color: $primary
 }
 
+.color-white {
+  color: $white
+}
+
+.color-white-48 {
+  color: $white48
+}
+
 .color-secondary {
   color: $secondary;
+}
+
+.bg-black {
+  background-color: #0D0A1D;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+.devider {
+  @include flex(center, space-between);
+  gap: 2px;
+
+  svg {
+    path {
+      stroke: $secondary;
+    }
+  }
+
+  p {
+    flex: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.16)
+  }
+}
+
+.btn-text-arrow {
+  @include flex(center, flex-start);
+
+  .arrow {
+    margin-left: 8px;
+    transition: all 0.2s ease-in;
+  }
+
+  &:hover {
+    .arrow {
+      transform: translateX(3px);
+
+    }
+  }
+
 }

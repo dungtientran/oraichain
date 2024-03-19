@@ -2,28 +2,84 @@
 @use "../mixin" as *;
 
 .header-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 20
+    z-index: 20;
 }
 
+.black-background {
+    // background-color: black;
+}
+
+.header-visiable {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    background-color: #0D0A1D;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 20;
+    transition: transform 0.2s ease;
+    transform: translateY(80px);
+
+}
+
+
+
+.hidden {
+    display: none
+}
 
 .header {
     @include flex(center, space-between);
     height: 80px;
+    width: 100%;
 
     &-nav {
         @include flex(center, flex-start);
+
+        .nav-logo {
+            &:hover {
+                span {
+                    color: $white
+                }
+
+                svg {
+                    transition: all 0.2s ease-in;
+
+                    path {
+                        fill-opacity: 1
+                    }
+                }
+
+            }
+        }
+
         &-item {
             @include flex(center, center);
             padding: 4px 12px;
 
-            span {
+            .header-nav-item_button {
                 transition: all 0.1s ease-in;
-                &:hover{
-                    color: $primary
+                cursor: pointer;
+
+                &:hover {
+                    color: $white;
+
+                    span {
+
+                        color: $white;
+                    }
+
+                    svg {
+                        transition: all 0.2s ease-in;
+
+                        path {
+                            fill-opacity: 1
+                        }
+                    }
                 }
             }
 
@@ -33,6 +89,33 @@
                 transform: rotate(90deg);
 
             }
+
+            &_button {
+                @include flex(center, center);
+
+            }
+        }
+
+
+    }
+
+    .nav-language {
+        @include flex(center, flex-start);
+        gap: 7px;
+        padding-right: 16px;
+
+        p {
+            font-size: 14px;
         }
     }
+
+}
+
+.nav-language-dropdown {
+    padding: 16px 0;
+}
+
+.languge-item {
+    padding: 8px 24px;
+    font-size: 16px;
 }

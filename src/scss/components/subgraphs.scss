@@ -1,0 +1,131 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.subgraphs {
+    @include flex(center, flex-start);
+    gap: 32px;
+    // padding-right: 64px;
+
+    &-images {
+        width: 501px;
+        height: 572px;
+        // flex: 1;
+        position: relative;
+
+        p {
+            font-weight: 600;
+        }
+
+        &-item-1 {
+            @include flex(center, center);
+            background-size: 100% 100%;
+            opacity: 1;
+            aspect-ratio: 642 / 392;
+            width: 64%;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 10;
+
+            p {
+                margin-top: 36px;
+
+            }
+        }
+
+        &-item-3 {
+            @include flex(center, center);
+            background-size: 100% 100%;
+            opacity: 1;
+            aspect-ratio: 642 / 392;
+            width: 64%;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 64%;
+            bottom: 32.34%;
+            z-index: 6;
+
+            p {
+                margin-top: 70px;
+
+            }
+        }
+
+        &-item-2 {
+            @include flex(center, center);
+            background-size: 100% 100%;
+            opacity: 1;
+            aspect-ratio: 642 / 392;
+            width: 64%;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 72%;
+            bottom: 46.85%;
+            z-index: 8;
+
+            p {
+                margin-top: 54px;
+
+            }
+        }
+
+        &-item-4 {
+            @include flex(center, center);
+            background-size: 100% 100%;
+            opacity: 1;
+            aspect-ratio: 1002 / 458;
+            width: 64%;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            bottom: 0;
+            z-index: 8;
+
+            p {
+                margin-bottom: 54px;
+
+            }
+        }
+    }
+
+    &-right {
+        width: 671px;
+
+        &-description {
+            margin-top: 32px;
+        }
+
+        &-btns {
+            margin-top: 64px;
+            @include flex(center, flex-start);
+            gap: 48px;
+
+            button {
+                font-size: 14px;
+                font-weight: 600;
+                height: 48px;
+
+            }
+
+            .btn-build {
+                background-color: $purple64;
+                padding: 0 24px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: $purple;
+
+                }
+            }
+
+
+        }
+    }
+}

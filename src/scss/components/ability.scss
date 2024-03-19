@@ -1,0 +1,29 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.ability {
+    padding: 0 64px;
+
+    &-list {
+        @include flex(flex-start, space-between);
+        column-gap: 5%;
+        row-gap: 48px;
+
+        h3 {
+            p {
+                text-wrap: nowrap
+            }
+        }
+
+        &-item {
+            @include flex(flex-start, space-between);
+            flex-direction: column;
+            gap: 16px;
+
+            .description {
+                text-align: left;
+                // padding-right: 26px;
+            }
+        }
+    }
+}

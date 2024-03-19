@@ -1,0 +1,90 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+
+.using-subgraph {
+
+    &-title {
+        padding: 0 192px;
+
+        h2 {
+            font-size: 64px;
+        }
+
+        p {
+            margin-top: 32px;
+            padding: 0 16px;
+        }
+    }
+
+    &-box {
+        @include flex(stretch, flex-start);
+
+        margin-top: 64px;
+        border: 16px solid $white8;
+        border-radius: 10px;
+        outline-width: 16px;
+        outline-color: $white8;
+
+        .box-card {
+            padding: 96px 48px 96px 64px;
+            flex: 1;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background-color: rgb(17, 15, 34);
+            }
+
+            .step {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: calc(1em + 2px);
+                letter-spacing: 0.15em;
+            }
+
+            &-title {
+                @include flex(flex-start, flex-start);
+                flex-direction: column;
+                gap: 8px;
+            }
+
+
+
+            .content-step-1 {
+                @include flex(flex-start, flex-start);
+                flex-direction: column;
+                gap: 32px;
+
+                &-img {
+                    margin-top: 32px;
+                    width: 232px;
+                    height: 232px;
+                }
+
+                .step-1-btn {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $white48;
+                }
+            }
+
+
+            .content-step-2 {
+                margin-top: 32px;
+            }
+
+
+        }
+
+        .box-card-2 {
+            padding: 96px 48px;
+        }
+
+        .devider {
+            width: 4px;
+            height: auto;
+            background-color: $white4;
+        }
+    }
+}
