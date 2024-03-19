@@ -85,8 +85,8 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   color: white;
-  // background-color: #0E0D1F;
-  background-color: rgb(12, 10, 29);
+  background-color: #0E0D1F;
+  // background-color: #100F28;
   font-family: EuclidCircular;
 
 }
@@ -125,20 +125,39 @@ span {
 
 h1 {
   font-size: 96px;
+
+  @media (max-width: $lg) {
+    font-size: 64px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 40px;
+
+    span {
+      text-wrap: wrap;
+    }
+  }
+
+
 }
 
 h2 {
   font-size: 48px;
   font-weight: 600;
-  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
-  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+
+  @media (max-width: $md) {
+    font-size: 40px;
+  }
 }
 
 h3 {
   font-size: 32px;
   font-weight: 600;
-  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
-  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+
+  @media (max-width: $md) {
+    font-size: 24px;
+  }
+
 }
 
 ul,

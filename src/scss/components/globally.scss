@@ -7,16 +7,37 @@
     &-title {
         padding: 0 192px;
 
+
+        @media (max-width: $lg) {
+            padding: 0 100px;
+
+        }
+
+        @media (max-width: $md) {
+            padding: 0 0;
+
+        }
+
         h2 {
             font-weight: 600;
             font-size: 48px;
             line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
             letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+
+            @media (max-width: $md) {
+                text-align: left;
+                font-size: 40px;
+
+            }
         }
 
         p {
             margin-top: 32px;
-            // padding: 0 16px;
+
+            @media (max-width: $md) {
+                text-align: left;
+
+            }
         }
     }
 
@@ -26,6 +47,26 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 32px;
         margin-top: 64px;
+
+
+
+        @media (max-width: $lg) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media (max-width: 1200px) {
+            padding: 0 50px;
+
+        }
+
+        @media (max-width: $md) {
+            padding: 0 0;
+        }
+
+        @media (max-width: $sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         &-item {
             @include flex(center, center);
@@ -37,6 +78,7 @@
             border: 1px solid $white4;
             position: relative;
             transition: all 0.2s ease-in;
+            height: 100%;
 
             &:hover {
                 background-color: $white8;

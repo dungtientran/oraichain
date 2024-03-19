@@ -1,9 +1,14 @@
 import React, { FC, MouseEvent, ReactNode, useEffect, useRef, useState } from "react";
+import { icons } from "../../libs/icons";
+
+const { ArrowSvg } = icons;
+
 
 interface Props {
   children: ReactNode;
   className?: string;
-  menu: { label: ReactNode }[]
+  menu: { label: ReactNode }[];
+
 }
 
 const Dropdown: FC<Props> = ({ children, menu, className }) => {
@@ -31,12 +36,15 @@ const Dropdown: FC<Props> = ({ children, menu, className }) => {
   };
 
   return (
-    <div ref={ref} className={`dropdown-container ${className}`}>
+    <div ref={ref} className={`dropdown-container `}>
       <div className="dropdown-container-children" onClick={handleShowDropDown}>
         {children}
+        <span className={`arrow-down ${isShow ? 'arow-open' : ''}`}>
+          <ArrowSvg style={{ width: '12px', height: '12px' }} />
+        </span>
       </div>
       <ul
-        className='dropdown-menu'
+        className={`dropdown-menu ${className} ${isShow ? 'dropdown-menu-show' : 'dropdown-menu-hidden'}`}
       >
         {menu.map((item, i) => (
           <li onClick={handleCloseDropDown} key={i} className="dropdown_item">

@@ -11,12 +11,19 @@
   padding: 0 32px;
   margin: 0 auto;
   max-width: 1352px;
+
+  @media (max-width: $md) {
+    padding: 0 16px;
+
+  }
 }
 
 .main-container {
   padding: 0 32px;
   margin: 0 auto;
   max-width: 1288px;
+
+
 }
 
 .text-small-12 {
@@ -43,8 +50,10 @@
 .text-regular {
   font-size: 24px;
   font-weight: 400;
-  line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
-  letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+
+  @media (max-width: $md) {
+    font-size: 20px;
+  }
 
 }
 
@@ -119,4 +128,13 @@
   top: 50%;
   z-index: 1000;
 
+}
+
+.arrow-down {
+  transform: rotate(90deg);
+  transition: all 0.1s ease-in;
+}
+
+.arow-open {
+  transform: rotate(-90deg)
 }

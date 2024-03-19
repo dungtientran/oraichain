@@ -4,14 +4,50 @@
 .ability {
     padding: 0 64px;
 
+
+
+    @media (max-width: $lg) {
+        padding: 0 54px;
+
+    }
+
+    @media (max-width: $md) {
+        padding: 0 16px;
+
+    }
+
+    .list-init {
+        transform: translateY(90px);
+    }
+
+    .list-tranform {
+        transform: translateY(0);
+
+    }
+
     &-list {
         @include flex(flex-start, space-between);
         column-gap: 5%;
         row-gap: 48px;
+        transition: all 0.4s ease-in;
+
+        @media (max-width: $md) {
+            flex-direction: column;
+        }
+
+
+
+
 
         h3 {
             p {
                 text-wrap: nowrap
+            }
+
+            @media (max-width: 1200px) {
+                p {
+                    text-wrap: wrap
+                }
             }
         }
 
@@ -26,4 +62,6 @@
             }
         }
     }
+
+
 }

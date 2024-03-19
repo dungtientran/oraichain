@@ -4,6 +4,11 @@
 .section-container {
     width: 100%;
     padding: 192px 0;
+
+
+    @media (max-width: $md) {
+        padding: 96px 0;
+    }
 }
 
 .section-container-notp {

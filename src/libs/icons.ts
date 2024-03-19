@@ -3,6 +3,7 @@ import { ReactComponent as ArrowSvg } from "../assets/icons/arrow.svg";
 import { ReactComponent as EarthSvg } from "../assets/icons/earth.svg";
 import { ReactComponent as DotSvg } from "../assets/icons/dot.svg";
 import { ReactComponent as ArrowLeftSvg } from "../assets/icons/arrow_left.svg";
+import { ReactComponent as Dot2Svg } from "../assets/icons/dot_2.svg";
 
 export const icons = {
     LogoSvg,
@@ -10,4 +11,5 @@ export const icons = {
     EarthSvg,
     DotSvg,
     ArrowLeftSvg,
+    Dot2Svg
 }

@@ -7,13 +7,35 @@
     &-title {
         padding: 0 192px;
 
+        @media (max-width: $lg) {
+            padding: 0 100px;
+
+        }
+
+        @media (max-width: $md) {
+            padding: 0 0;
+
+        }
+
         h2 {
             font-size: 64px;
+
+            @media (max-width: $md) {
+                text-align: left;
+                font-size: 40px;
+
+            }
         }
 
         p {
             margin-top: 32px;
             padding: 0 16px;
+
+            @media (max-width: $md) {
+                text-align: left;
+                padding: 0 0;
+
+            }
         }
     }
 

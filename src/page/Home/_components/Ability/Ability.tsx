@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
+
+interface Props {
+    isVisible: boolean
+}
 
 const list = [
     {
@@ -21,12 +25,14 @@ const list = [
     },
 ]
 
-const Ability = () => {
+const Ability: FC<Props> = ({ isVisible }) => {
+    console.log("Ability", isVisible)
+
     return (
         <div className='main-container ability'>
             <div className='ability-list'>
                 {list.map((item => (
-                    <div key={item.id} className='ability-list-item'>
+                    <div key={item.id} className={`ability-list-item ${!isVisible ? 'list-init' : 'list-tranform'}`} >
                         <h3>
                             <p className='color-primary'>{item.title}</p>
                             <p className='color-secondary'>{item.subTitle}</p>

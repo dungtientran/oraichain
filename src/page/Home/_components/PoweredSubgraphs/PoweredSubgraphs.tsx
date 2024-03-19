@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { TextArrowBtn } from '../../../../components'
+interface Props {
+    isVisible: boolean
+}
 
-const PoweredSubgraphs = () => {
+const PoweredSubgraphs: FC<Props> = ({ isVisible }) => {
+
     return (
         <div className='main-container powered-subgraphs'>
             {/* Web3 */}

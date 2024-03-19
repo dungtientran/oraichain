@@ -17,36 +17,37 @@ const Home = () => {
 
       {/* Ability */}
       <Section>
-        <Ability />
+        {isVisible => <Ability isVisible={isVisible} />}
       </Section>
       <Devider />
 
       {/* Subgraphs */}
-
       <Section>
-        <Subgraphs />
+        {isVisible => <Subgraphs isVisible={isVisible} />}
       </Section>
 
       {/* Powered by subgraphs */}
       <Section isPaddingTop={true}>
-        <PoweredSubgraphs />
+        {isVisible => <PoweredSubgraphs isVisible={isVisible} />}
       </Section>
       <Devider />
 
       {/* UsingSubgraph */}
-      <Section >
-        <UsingSubgraph />
+      {/* <Section>
+        {isVisible => <UsingSubgraph isVisible={isVisible} />}
       </Section>
+      <Devider /> */}
 
       {/* Globally */}
       {/* <Section isPaddingTop={true}>
-        <Ecosystem />
-      </Section> */}
+        {isVisible => <Ecosystem isVisible={isVisible} />}
+      </Section>
+      <Devider /> */}
 
       {/* Ecosystem */}
-      <Section isPaddingTop={true}>
-        <Globally />
-      </Section>
+      {/* <Section isPaddingTop={true}>
+        {isVisible => <Globally isVisible={isVisible} />}
+      </Section> */}
 
     </div>
   );
