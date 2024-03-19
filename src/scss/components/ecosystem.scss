@@ -1,0 +1,11 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+
+.ecosystem {
+
+    &-map {
+        margin-top: 32px;
+        padding: 0 64px;
+    }
+}

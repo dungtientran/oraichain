@@ -109,3 +109,14 @@
   }
 
 }
+
+.arrow-run {
+  opacity: 0;
+  transition: all 0.1s ease-in;
+  transform: translateY(-50%);
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  z-index: 1000;
+
+}

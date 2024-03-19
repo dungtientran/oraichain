@@ -5,6 +5,8 @@ import { Devider, Section } from "../../components";
 import Subgraphs from "./_components/Subgraphs/Subgraphs";
 import PoweredSubgraphs from "./_components/PoweredSubgraphs/PoweredSubgraphs";
 import UsingSubgraph from "./_components/UsingSubgraph/UsingSubgraph";
+import Globally from "./_components/Globally/Globally";
+import Ecosystem from "./_components/Ecosystem/Ecosystem";
 
 const Home = () => {
   return (
@@ -35,7 +37,16 @@ const Home = () => {
       <Section >
         <UsingSubgraph />
       </Section>
-      <Devider />
+
+      {/* Globally */}
+      {/* <Section isPaddingTop={true}>
+        <Ecosystem />
+      </Section> */}
+
+      {/* Ecosystem */}
+      <Section isPaddingTop={true}>
+        <Globally />
+      </Section>
 
     </div>
   );

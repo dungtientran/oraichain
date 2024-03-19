@@ -1,0 +1,104 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+
+.globally {
+
+    &-title {
+        padding: 0 192px;
+
+        h2 {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: clamp(1em, calc(0.9em + 9.6px), 1.5em);
+            letter-spacing: clamp(-2px, calc(-0.05em + 0.8px), 0px);
+        }
+
+        p {
+            margin-top: 32px;
+            // padding: 0 16px;
+        }
+    }
+
+    &-list {
+        padding: 0 128px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 64px;
+
+        &-item {
+            @include flex(center, center);
+            flex-direction: column;
+            cursor: pointer;
+            padding: 40px 32px;
+            background-color: $white2;
+            border-radius: 8px;
+            border: 1px solid $white4;
+            position: relative;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                background-color: $white8;
+                border-color: $white8;
+
+
+            }
+
+            .image {
+                width: 80px;
+                height: 80px;
+                // margin-bottom: 8px;
+            }
+
+            .title {
+                color: rgb(255, 255, 255);
+                font-size: 20px;
+                font-weight: 600;
+                position: relative;
+
+            }
+
+            .description {
+                margin-top: 8px;
+            }
+
+            .image-read-more {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+                opacity: 0.16;
+                filter: grayscale(75%);
+                transition: all 0.2s ease-in;
+
+            }
+        }
+
+        &-item-read-more {
+            transition: color 200ms ease 0ms, background-color 200ms ease 0ms, border-color 200ms ease 0ms, text-decoration-color 200ms ease 0ms, fill 200ms ease 0ms, stroke 200ms ease 0ms;
+            position: relative;
+
+            &:hover {
+                background-color: transparent;
+                transition: all 0.5s ease-in;
+
+                .image-read-more {
+                    opacity: 1;
+                    filter: grayscale(0%);
+
+                }
+
+                .arrow-run {
+                    opacity: 1;
+                    transform: translate(60%, -50%);
+
+                }
+            }
+        }
+    }
+
+
+}

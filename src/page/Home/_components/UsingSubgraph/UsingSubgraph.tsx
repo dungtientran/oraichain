@@ -43,13 +43,23 @@ const UsingSubgraph = () => {
                     {/* content-step-2 */}
 
                     <div className='content-step-2 '>
-                        {`{`}
-                        <p>
+                        {`{ `}
+                        <p className='rick-text-1'>
                             <span>pools</span> {`(`}
                             <span>first: </span>
-                            <span>10</span> {`)`}
+                            <span>10</span> {`)`} {`{`}
                         </p>
-                        {`}`}
+
+                        <p className='rick-text-2'>
+                            address <br />
+                            annualPercentageReturn <br />
+                            utilizationRate <br />
+                            netSize <br />
+                            netSizeInUsd <br />
+                            pairName <br />
+                        </p>
+                        <span>{`}`}</span> <br />
+                        <span>{`}`}</span> <br />
 
                     </div>
                 </div>
