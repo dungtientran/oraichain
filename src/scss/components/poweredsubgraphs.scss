@@ -6,10 +6,20 @@
     transform: translateY(20px);
     opacity: 0.3;
     transition: all 0.5s ease-in;
+    position: relative;
 
     @media (max-width: $lg) {
         padding-left: 16px;
 
+    }
+
+    &-background {
+        z-index: -1;
+        position: absolute;
+        left: -70%;
+        top: 50%;
+        // aspect-ratio: 3345/3345;
+        background-size: 100% 100%
     }
 
     &-web3 {

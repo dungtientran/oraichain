@@ -158,6 +158,10 @@ const PoweredSubgraphs: FC<Props> = ({ isVisible }) => {
 
     return (
         <div className={`main-container powered-subgraphs ${isVisible && 'powered-subgraphs-visible'}`}>
+            {/* background */}
+            <div className='powered-subgraphs-background' style={{ backgroundImage: 'url("https://thegraph.com/_next/static/media/planet.b15ea742.png")', width: '100vw', height: '100vh' }}>
+
+            </div>
             {/* Web3 */}
             <div className='powered-subgraphs-web3'>
 
