@@ -2,7 +2,24 @@ import React, { FC, useRef, useState } from 'react'
 import { TextArrowBtn } from '../../../../components';
 import { icons } from '../../../../libs/icons';
 
-const { ArrowLeftSvg, NetWork1Svg } = icons;
+const { ArrowLeftSvg,
+    NetWork1Svg,
+    Svgexport10Svg,
+    Svgexport11Svg,
+    Svgexport12Svg,
+    Svgexport13Svg,
+    Svgexport14Svg,
+    Svgexport15Svg,
+    Svgexport16Svg,
+    Svgexport17Svg,
+    Svgexport18Svg,
+    Svgexport19Svg,
+    Svgexport20Svg,
+    Svgexport21Svg,
+    Svgexport22Svg,
+    Svgexport8Svg,
+    Svgexport9Svg
+} = icons;
 
 interface Props {
     isVisible: boolean
@@ -14,31 +31,46 @@ const images = [
     {
         title: 'Defi',
         images: [
-            imageUrl, imageUrl, imageUrl, imageUrl
+            imageUrl,
+            'https://ipfs.network.thegraph.com/api/v0/cat?arg=Qmao586HmvZ3ZctgFpC2421u2ykPzLdAT9Z3ywdGyMCpHH',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmQQdjnzdPEY3nuwSvLr3Wgy4gdyAwHE59UqgFsEdKE4ht',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmexXcnTUocqoihRMx8HKA7m59Q3S4A3ZPBqVxWhF5LVoJ'
         ]
     },
     {
         title: 'NFTs',
         images: [
-            imageUrl, imageUrl, imageUrl, imageUrl
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmaSdMXUU1PWYNxZGZpUG85ce4taMdfibDQgidTNb2jYuJ',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmdSeSQ3APFjLktQY3aNVu3M5QXPfE9ZRK5LqgghRgB7L9',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmcsTC7qnF96RXAtrzitrh9JTwfR9NZ37JwxYAdhYLaFqw',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmXa5Cah5Kjgx6HJtciZK5VjNyAiXUPjvQNv6VkZEwJWth'
         ]
     },
     {
         title: 'DAOs',
         images: [
-            imageUrl, imageUrl, imageUrl, imageUrl
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmXevwpaKP3QUXXStnS5wQWVwZKS5SeSJ9GFLSKW6QJsbe',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmVJDauaPgh56etnzw89eGFA56wcdBAYixt2wkWfsmCThB',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmU1ZY4j7Bwj3gniHEqWnGwWgHVuhj9PyGywYLN6Gq92bF',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmdSeSQ3APFjLktQY3aNVu3M5QXPfE9ZRK5LqgghRgB7L9'
         ]
     },
     {
         title: 'Analytics',
         images: [
-            imageUrl, imageUrl, imageUrl, imageUrl
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmTd5VwfHWZvzPVCLKrtroNeU1z6hUUS3KQYsD788te6ES',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=Qmed66AN7gBGLgowVJzDxoTE9EoF4qDLNwM1FrGCH5kYaa',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmetEvHGiCMTorsFnGwXMXrNGaTNGcSSUCvezVZQkJv3Ei',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmYKdvJjH1zetxx5Tw6LC51VkvT1VSNaaMJfLCp31FArHR'
         ]
     },
     {
         title: 'Gaming',
         images: [
-            imageUrl, imageUrl, imageUrl, imageUrl
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmXgXtC2nTtCZpb2m1PVpepRu5TdTTcZYwVW8sQcnEgWHX',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmcF51LQeaekv7NyJmuZeMYCd7LrRuRwhh6McU6SJ4yfiV',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmZDSm3RDms3s8g6jpueC5RF3fM6FR5qNahaHC9DeAE8km',
+            'https://api.thegraph.com/ipfs/api/v0/cat?arg=QmdSeSQ3APFjLktQY3aNVu3M5QXPfE9ZRK5LqgghRgB7L9'
         ]
     },
 ]
@@ -47,59 +79,59 @@ const images = [
 const networks = [
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport8Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport9Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport10Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport11Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport12Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport13Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport14Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport15Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport16Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport17Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport18Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport19Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport20Svg />
     },
     {
         title: 'Ethereum',
-        icon: <NetWork1Svg />
+        icon: <Svgexport21Svg />
     },
 ]
 
