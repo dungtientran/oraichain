@@ -5,6 +5,10 @@
 .learn-more {
     padding: 0 64px;
 
+    @media (max-width: $md) {
+        padding: 0 16px;
+    }
+
     &-title {
         p {
             margin-top: 32px;
@@ -15,7 +19,11 @@
         @include flex (center, space-between);
         margin-top: 64px;
 
-        gap: 16px;
+        gap: 32px;
+
+        @media (max-width: $lg) {
+            flex-direction: column;
+        }
 
         h3 {
             text-transform: uppercase;
@@ -36,7 +44,6 @@
                 @include flex (center, space-between);
                 flex-direction: column;
                 gap: 16px;
-                border-radius: 4px;
                 width: 100%;
 
                 &-item {
@@ -46,6 +53,8 @@
                     padding: 16px 40px 16px 16px;
                     background-color: $white8;
                     width: 100%;
+                    border: 1px solid $white8;
+                    border-radius: 4px;
 
                     &:hover {
                         background-color: $white16;
@@ -59,7 +68,7 @@
                 }
 
                 .title {
-                    width: 70%;
+                    width: 100%;
                     display: inline-block;
                 }
 

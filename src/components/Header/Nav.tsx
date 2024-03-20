@@ -83,9 +83,9 @@ export const Nav = () => {
         <li>
           <a href="#" className="header-nav-item nav-logo">
             <LogoSvg style={{ marginRight: "7px", marginBottom: '2px' }} />
-            {/* <span className=""> */}
-            <ArrowSvg style={{ width: '12px' }} className="arrow-down" />
-            {/* </span> */}
+            {/* <span className="">
+              <ArrowSvg style={{ width: '12px' }} className="arrow-down" />
+            </span> */}
             <span className="text-small color-primary">The Graph</span>
           </a>
         </li>

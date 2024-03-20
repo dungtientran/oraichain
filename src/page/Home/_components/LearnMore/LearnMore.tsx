@@ -1,4 +1,5 @@
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC } from 'react'
+import { TextArrowBtn } from '../../../../components'
 
 interface Props {
     isVisible: boolean
@@ -41,14 +42,14 @@ const list = [
             },
             {
                 title: 'Subgraph Quick Start',
-                imageUrl: 'https://thegraph.com/_next/static/media/blog-graph-network.68d5832b.jpg',
+                imageUrl: 'https://thegraph.com/_next/static/media/docs-quick-start.39193871.svg',
                 description: '',
                 createdAt: '6 minute read'
             },
             {
-                title: 'Intro to web3 and The Graph',
-                imageUrl: 'https://thegraph.com/_next/static/media/blog-roadmap.2859254d.jpg',
-                description: 'The Graph Foundation',
+                title: 'How to Query Subgraphs',
+                imageUrl: 'https://thegraph.com/_next/static/media/docs-query.a719688e.svg',
+                description: '',
                 createdAt: '6 minute read'
             },
         ]
@@ -58,21 +59,21 @@ const list = [
         title: 'VIDEOS',
         attributes: [
             {
-                title: 'Intro to web3 and The Graph',
-                imageUrl: 'https://thegraph.com/_next/static/media/blog-intro-to-web3.72ed0790.jpg',
-                description: 'The Graph Foundation',
+                title: 'How to Delegate GRT',
+                imageUrl: 'https://thegraph.com/_next/static/media/video-play.9eba406e.svg',
+                description: '',
                 createdAt: '6 minute read'
             },
             {
-                title: 'Intro to web3 and The Graph',
-                imageUrl: 'https://thegraph.com/_next/static/media/blog-intro-to-web3.72ed0790.jpg',
-                description: 'The Graph Foundation',
+                title: 'Quarterly Participant Update',
+                imageUrl: 'https://thegraph.com/_next/static/media/video-play.9eba406e.svg',
+                description: '',
                 createdAt: '6 minute read'
             },
             {
-                title: 'Intro to web3 and The Graph',
-                imageUrl: 'https://thegraph.com/_next/static/media/blog-intro-to-web3.72ed0790.jpg',
-                description: 'The Graph Foundation',
+                title: 'How to Migrate a Subgraph',
+                imageUrl: 'https://thegraph.com/_next/static/media/video-play.9eba406e.svg',
+                description: '',
                 createdAt: '6 minute read'
             },
         ]
@@ -85,7 +86,7 @@ const list = [
 const LearnMore: FC<Props> = ({ isVisible }) => {
 
     return (
-        <div className='main-container learn-more'>
+        <div className={`main-container learn-more ${isVisible ? 'visible' : 'un-visible'}`}>
             {/* Title */}
             <div className='learn-more-title'>
                 <h2>Learn more</h2>
@@ -112,8 +113,11 @@ const LearnMore: FC<Props> = ({ isVisible }) => {
                                         <span className='title'>{attribute.title}</span>
 
                                         <div className='description text-small-12 color-white-48'>
-                                            <span>{attribute.description}</span>
-                                            <span className='dot' />
+                                            <span>{ }</span>
+                                            {!!attribute.description && (
+                                                <span className='dot' />
+
+                                            )}
                                             <span>{attribute.createdAt}</span>
                                         </div>
 
@@ -123,6 +127,11 @@ const LearnMore: FC<Props> = ({ isVisible }) => {
                                 </div>
                             ))}
                         </div>
+
+
+                        {/* Btn */}
+
+                        <TextArrowBtn className='text-md-16 color-white-48' label='View all post' />
                     </div>
                 ))}
             </div>

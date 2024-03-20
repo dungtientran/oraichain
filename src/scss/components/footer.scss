@@ -26,6 +26,7 @@
             @include flex(center, center);
             gap: 8px;
             margin-top: 24px;
+            flex-wrap: wrap;
 
             li {
                 p {
