@@ -1,12 +1,15 @@
-import React from 'react'
-import Step1 from "../../../../assets/images/using-subgraph-step-1.png";
-import Step3 from "../../../../assets/images/using-subgraph-step-3.png";
-import { TextArrowBtn } from '../../../../components';
+import React, { FC } from 'react'
+
+interface Props {
+    isVisible: boolean
+}
+
+const Ecosystem: FC<Props> = ({ isVisible }) => {
 
 
-const Ecosystem = () => {
+    console.log("Ecosystem", Ecosystem)
     return (
-        <div className='container using-subgraph ecosystem'>
+        <div className={`container using-subgraph ecosystem ${!isVisible ? 'un-visible ' : 'visible'}`}>
             <div className='using-subgraph-title'>
                 <h2 className='text-center color-white'>
                     <span>Globally distributed</span><br />

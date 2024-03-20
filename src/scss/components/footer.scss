@@ -1,0 +1,43 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.footer {
+    @include flex(center, center);
+    padding: 32px;
+
+    &-nav {
+        &-1 {
+            @include flex(center, center);
+            gap: 16px;
+
+            li {
+                p {
+                    transition: all 0.2s ease-in;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &-2 {
+            @include flex(center, center);
+            gap: 8px;
+            margin-top: 24px;
+
+            li {
+                p {
+                    transition: all 0.2s ease-in;
+                    cursor: pointer;
+                    padding: 8px 12px;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

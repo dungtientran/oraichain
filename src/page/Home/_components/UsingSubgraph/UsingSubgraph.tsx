@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Step1 from "../../../../assets/images/using-subgraph-step-1.png";
 import Step3 from "../../../../assets/images/using-subgraph-step-3.png";
-import { TextArrowBtn } from '../../../../components';
+import { icons } from '../../../../libs/icons';
 
+const { ArrowLeftSvg } = icons;
 
-const UsingSubgraph = () => {
+interface Props {
+    isVisible: boolean
+}
+
+const UsingSubgraph: FC<Props> = ({ isVisible }) => {
+
     return (
-        <div className='container using-subgraph'>
+        <div className={`container using-subgraph ${!isVisible ? 'un-visible' : 'visible'}`}>
             <div className='using-subgraph-title'>
                 <h2 className='text-center color-white'>How to use a subgraph</h2>
                 <p className='text-center text-regular color-secondary'>With The Graph, it’s easy to access blockchain data using subgraphs and GraphQL queries. Join a growing number of trailblazers creating fast, responsive applications with data that loads in milliseconds.</p>
@@ -27,7 +33,7 @@ const UsingSubgraph = () => {
                         <div className='content-step-1-img'>
                             <img src={Step1} alt='step1' />
                         </div>
-                        <p className='step-1-btn'>View the subgraph</p>
+                        <p className='step-1-btn'>View the subgraph <ArrowLeftSvg className='arrow-run' /></p>
                     </div>
                 </div>
                 <div className='devider'></div>
@@ -42,24 +48,28 @@ const UsingSubgraph = () => {
 
                     {/* content-step-2 */}
 
-                    <div className='content-step-2 '>
-                        {`{ `}
-                        <p className='rick-text-1'>
-                            <span>pools</span> {`(`}
-                            <span>first: </span>
-                            <span>10</span> {`)`} {`{`}
-                        </p>
+                    <div className='content-step-1 content-step-2 '>
+                        <div>
+                            {`{ `}
+                            <p className='rick-text-1'>
+                                <span className='color-blue'>pools      </span> {`(`}
+                                <span className='color-green'>first: </span>
+                                <span className='color-purple'>10</span> {`)  {`}
+                            </p>
 
-                        <p className='rick-text-2'>
-                            address <br />
-                            annualPercentageReturn <br />
-                            utilizationRate <br />
-                            netSize <br />
-                            netSizeInUsd <br />
-                            pairName <br />
-                        </p>
-                        <span>{`}`}</span> <br />
-                        <span>{`}`}</span> <br />
+                            <p className='rick-text-2 color-blue'>
+                                address <br />
+
+                                annualPercentageReturn <br />
+                                utilizationRate <br />
+                                netSize <br />
+                                netSizeInUsd <br />
+                                pairName <br />
+                            </p>
+                            <span className='rick-text-3'>{`}`}</span> <br />
+                            <span className='rick-text-4'>{`}`}</span> <br />
+                        </div>
+                        <p className='step-1-btn'>View the playground <ArrowLeftSvg className='arrow-run' /></p>
 
                     </div>
                 </div>
@@ -79,7 +89,7 @@ const UsingSubgraph = () => {
                         <div className='content-step-1-img'>
                             <img src={Step3} alt='step3' />
                         </div>
-                        <p className='step-1-btn'>View the subgraph</p>
+                        <p className='step-1-btn'>View the dapp <ArrowLeftSvg className='arrow-run' /></p>
                     </div>
                 </div>
             </div>

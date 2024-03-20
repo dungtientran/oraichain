@@ -48,14 +48,35 @@
         outline-width: 16px;
         outline-color: $white8;
 
+        @media (max-width: 868px) {
+            flex-direction: column;
+
+        }
+
         .box-card {
             padding: 96px 48px 96px 64px;
             flex: 1;
             cursor: pointer;
             transition: all 0.3s ease-in;
 
+            @media (max-width: $lg) {
+                padding: 16px;
+
+            }
+
             &:hover {
                 background-color: rgb(17, 15, 34);
+
+                .step-1-btn {
+                    color: $white;
+                }
+
+
+                .arrow-run {
+                    opacity: 1;
+                    transform: translate(60%, -50%);
+
+                }
             }
 
             .step {
@@ -82,15 +103,36 @@
                     margin-top: 32px;
                     width: 232px;
                     height: 232px;
+
+                    @media (max-width: 868) {
+                        width: 232px;
+                        height: 232px;
+                    }
+
+                    @media (max-width: 1100px) {
+                        width: auto;
+                        height: auto;
+                    }
+
+
                 }
 
-                .step-1-btn {
-                    font-size: 16px;
-                    font-weight: 400;
-                    color: $white48;
+                @media (max-width: 868px) {
+                    @include flex(center, center);
+                    flex-direction: column;
+
                 }
+
             }
 
+            .step-1-btn {
+                position: relative;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                color: $white48;
+                transition: all 0.2s ease-in;
+            }
 
             .content-step-2 {
                 margin-top: 32px;
@@ -102,6 +144,14 @@
                 .rick-text-2 {
                     margin-left: 70px;
                 }
+
+                .rick-text-3 {
+                    margin-left: 56px;
+                }
+
+                .rick-text-4 {
+                    margin-left: 36px;
+                }
             }
 
 
@@ -109,6 +159,11 @@
 
         .box-card-2 {
             padding: 96px 48px;
+
+            @media (max-width: $lg) {
+                padding: 16px;
+
+            }
         }
 
         .devider {

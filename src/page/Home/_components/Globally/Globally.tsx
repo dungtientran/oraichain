@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Globally_1 from "../../../../assets/images/globally_1.png";
 import Globally_2 from "../../../../assets/images/globally-2.png";
 import Globally_3 from "../../../../assets/images/globally-3.png";
@@ -8,6 +8,10 @@ import { TextArrowBtn } from '../../../../components';
 import { icons } from '../../../../libs/icons';
 
 const { ArrowLeftSvg } = icons
+
+interface Props {
+    isVisible: boolean
+}
 
 const globallies = [
     {
@@ -37,9 +41,9 @@ const globallies = [
     },
 ]
 
-const Globally = () => {
+const Globally: FC<Props> = ({ isVisible }) => {
     return (
-        <div className='main-2-container globally'>
+        <div className={`main-2-container globally ${!isVisible ? 'un-visible' : 'visible'}`}>
             {/* Title */}
             <div className='globally-title'>
                 <h2 className='text-center color-white'>

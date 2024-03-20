@@ -7,6 +7,8 @@ import PoweredSubgraphs from "./_components/PoweredSubgraphs/PoweredSubgraphs";
 import UsingSubgraph from "./_components/UsingSubgraph/UsingSubgraph";
 import Globally from "./_components/Globally/Globally";
 import Ecosystem from "./_components/Ecosystem/Ecosystem";
+import FooterBanner from "./_components/FooterBanner/FooterBanner";
+import LearnMore from "./_components/LearnMore/LearnMore";
 
 const Home = () => {
   return (
@@ -33,10 +35,9 @@ const Home = () => {
       <Devider />
 
       {/* UsingSubgraph */}
-      {/* <Section>
+      <Section>
         {isVisible => <UsingSubgraph isVisible={isVisible} />}
       </Section>
-      <Devider /> */}
 
       {/* Globally */}
       {/* <Section isPaddingTop={true}>
@@ -45,10 +46,17 @@ const Home = () => {
       <Devider /> */}
 
       {/* Ecosystem */}
-      {/* <Section isPaddingTop={true}>
+      <Section isPaddingTop={true}>
         {isVisible => <Globally isVisible={isVisible} />}
-      </Section> */}
+      </Section>
 
+      {/* LearnMore */}
+      <Section isPaddingTop={true}>
+        {isVisible => <LearnMore isVisible={isVisible} />}
+      </Section>
+
+      {/* FooterBanner */}
+      {/* <FooterBanner /> */}
     </div>
   );
 };

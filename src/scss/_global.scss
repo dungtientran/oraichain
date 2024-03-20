@@ -42,6 +42,11 @@
   font-weight: 400;
 }
 
+.text-md-16 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .text-md {
   font-size: 18px;
   font-weight: 400;
@@ -73,12 +78,31 @@
   color: $white
 }
 
+.color-white-64 {
+  color: $white64
+}
+
 .color-white-48 {
   color: $white48
 }
 
 .color-secondary {
   color: $secondary;
+}
+
+.color-blue {
+  color: $blue;
+  font-weight: 500;
+}
+
+.color-green {
+  color: $green;
+  font-weight: 500;
+}
+
+.color-purple {
+  color: $purple;
+  font-weight: 500;
 }
 
 .bg-black {
@@ -137,4 +161,16 @@
 
 .arow-open {
   transform: rotate(-90deg)
+}
+
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+.un-visible {
+  transform: translateY(20px);
+  opacity: 0.3;
+  transition: all 0.3s ease-in;
 }
